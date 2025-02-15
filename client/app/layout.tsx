@@ -23,9 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${poppins.variable} font-sans bg-secondary-main`}
     >
       <body>
-        <main className="flex items-center justify-center h-dvh">
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
