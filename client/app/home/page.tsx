@@ -10,114 +10,52 @@ import heartIcon from "../../public/heart-icon.svg";
 
 export default function Page() {
   return (
-    <div className="p-5 flex gap-2 flex-wrap content-start justify-center">
-      <div className="flex flex-col w-40 justify-center">
-        <div className="relative h-28 rounded-t-xl overflow-clip">
-          <Image
-            src={cieloPng}
-            alt="A bumbum"
-            placeholder="blur"
-            style={{
-              objectFit: "cover",
-            }}
-            fill
-          />
-        </div>
-        <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
-          <div className="flex justify-between">
-            <span className="text-primary-main font-bold">Cielo</span>
-            <Image
-              src={heartFilledIcon}
-              alt="You like the bumbum"
-              unoptimized
-            />
-          </div>
-          <div className="flex gap-1 items-center">
-            <Image src={pawsMaleIcon} alt="Gender of the bumbum" unoptimized />
-            <span className="text-secondary-alt text-xs">Male</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col w-40  justify-center">
-        <div className="relative h-28 rounded-t-xl overflow-clip">
-          <Image
-            src={haloPng}
-            alt="A bumbum"
-            placeholder="blur"
-            style={{
-              objectFit: "cover",
-            }}
-            fill
-          />
-        </div>
-        <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
-          <div className="flex justify-between">
-            <span className="text-primary-main font-bold">Halo</span>
-            <Image src={heartIcon} alt="You like the bumbum" unoptimized />
-          </div>
-          <div className="flex gap-1 items-center">
-            <Image
-              src={pawsFemaleIcon}
-              alt="Gender of the bumbum"
-              unoptimized
-            />
-            <span className="text-secondary-alt text-xs">Female</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col w-40  justify-center">
-        <div className="relative h-28 rounded-t-xl overflow-clip">
-          <Image
-            src={cieloPng}
-            alt="A bumbum"
-            placeholder="blur"
-            style={{
-              objectFit: "cover",
-            }}
-            fill
-          />
-        </div>
-        <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
-          <div className="flex justify-between">
-            <span className="text-primary-main font-bold">Cielo</span>
-            <Image
-              src={heartFilledIcon}
-              alt="You like the bumbum"
-              unoptimized
-            />
-          </div>
-          <div className="flex gap-1 items-center">
-            <Image src={pawsMaleIcon} alt="Gender of the bumbum" unoptimized />
-            <span className="text-secondary-alt text-xs">Male</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col w-40 justify-center">
-        <div className="relative h-28 rounded-t-xl overflow-clip">
-          <Image
-            src={haloPng}
-            alt="A bumbum"
-            placeholder="blur"
-            style={{
-              objectFit: "cover",
-            }}
-            fill
-          />
-        </div>
-        <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
-          <div className="flex justify-between">
-            <span className="text-primary-main font-bold">Halo</span>
-            <Image src={heartIcon} alt="You like the bumbum" unoptimized />
-          </div>
-          <div className="flex gap-1 items-center">
-            <Image
-              src={pawsFemaleIcon}
-              alt="Gender of the bumbum"
-              unoptimized
-            />
-            <span className="text-secondary-alt text-xs">Female</span>
-          </div>
-        </div>
+    <div className="p-10">
+      <h2 className="text-secondary-alt">Hiya</h2>
+      <h1 className="text-xl font-bold text-secondary-alt">
+        Welcome to Bumbum
+      </h1>
+      <p className="text-xs text-primary-main w-3/5">
+        Bumbum is waiting to meet you. Let’s find your new best friend!
+      </p>
+      <div className="pt-5 flex gap-2 flex-wrap content-start justify-between">
+        {Array(10)
+          .fill(0)
+          .map((_, index) => (
+            <div className="flex flex-col w-40 justify-center" key={index}>
+              <div className="relative h-28 rounded-t-xl overflow-clip">
+                <Image
+                  src={index % 3 === 0 ? cieloPng : haloPng}
+                  alt="A bumbum"
+                  placeholder="blur"
+                  style={{
+                    objectFit: "cover",
+                  }}
+                  fill
+                />
+              </div>
+              <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
+                <div className="flex justify-between">
+                  <span className="text-primary-main font-bold">Cielo</span>
+                  <Image
+                    src={index % 3 === 0 ? heartFilledIcon : heartIcon}
+                    alt="You like the bumbum"
+                    unoptimized
+                  />
+                </div>
+                <div className="flex gap-1 items-center">
+                  <Image
+                    src={index % 3 === 0 ? pawsMaleIcon : pawsFemaleIcon}
+                    alt="Gender of the bumbum"
+                    unoptimized
+                  />
+                  <span className="text-secondary-alt text-xs">
+                    {index % 3 === 0 ? "Male" : "Female"}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );
