@@ -21,41 +21,46 @@ export default function Page() {
       <div className="pt-5 flex gap-2 flex-wrap content-start justify-between">
         {Array(10)
           .fill(0)
-          .map((_, index) => (
-            <div className="flex flex-col w-40 justify-center" key={index}>
-              <div className="relative h-28 rounded-t-xl overflow-clip">
-                <Image
-                  src={index % 3 === 0 ? cieloPng : haloPng}
-                  alt="A bumbum"
-                  placeholder="blur"
-                  style={{
-                    objectFit: "cover",
-                  }}
-                  fill
-                />
-              </div>
-              <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
-                <div className="flex justify-between">
-                  <span className="text-primary-main font-bold">Cielo</span>
+          .map((_, index) => {
+            const isVariant = index % 3 === 0;
+            return (
+              <div className="flex flex-col w-40 justify-center" key={index}>
+                <div className="relative h-28 rounded-t-xl overflow-clip">
                   <Image
-                    src={index % 3 === 0 ? heartFilledIcon : heartIcon}
-                    alt="You like the bumbum"
-                    unoptimized
+                    src={isVariant ? cieloPng : haloPng}
+                    alt="A bumbum"
+                    placeholder="blur"
+                    style={{
+                      objectFit: "cover",
+                    }}
+                    fill
                   />
                 </div>
-                <div className="flex gap-1 items-center">
-                  <Image
-                    src={index % 3 === 0 ? pawsMaleIcon : pawsFemaleIcon}
-                    alt="Gender of the bumbum"
-                    unoptimized
-                  />
-                  <span className="text-secondary-alt text-xs">
-                    {index % 3 === 0 ? "Male" : "Female"}
-                  </span>
+                <div className="flex flex-col bg-primary-alt rounded-b-xl p-3">
+                  <div className="flex justify-between">
+                    <span className="text-primary-main font-bold">
+                      {isVariant ? "Cielo" : "Halo"}
+                    </span>
+                    <Image
+                      src={isVariant ? heartFilledIcon : heartIcon}
+                      alt="You like the bumbum"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex gap-1 items-center">
+                    <Image
+                      src={isVariant ? pawsMaleIcon : pawsFemaleIcon}
+                      alt="Gender of the bumbum"
+                      unoptimized
+                    />
+                    <span className="text-secondary-alt text-xs">
+                      {isVariant ? "Male" : "Female"}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
       </div>
     </div>
   );
