@@ -16,6 +16,9 @@ module.exports = {
           main: "#7395F9",
           alt: "#F97389",
         },
+        background: {
+          main: "#D9D9D9",
+        },
       },
       fontFamily: {
         sans: ["var(--font-poppins)"],

@@ -1,9 +1,9 @@
-import { type ReactNode } from "react";
-
-import { type Metadata } from "next";
-import { Poppins } from "next/font/google";
-
 import "./globals.css";
+
+import { type ReactNode } from "react";
+import { type Metadata } from "next";
+
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${poppins.variable} font-sans bg-secondary-main`}
     >
       <body>
-        <main>{children}</main>
+        <main className="p-8">{children}</main>
       </body>
     </html>
   );
