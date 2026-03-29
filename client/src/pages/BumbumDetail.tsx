@@ -17,7 +17,7 @@ const petData = {
 
 export default function BumbumDetail() {
   const { id } = useParams<{ id: string }>();
-  const pet = petData[id as keyof typeof petData] || petData[1];
+  const pet = petData[Number(id) as keyof typeof petData] || petData[1];
   const isLiked = true;
 
   return (
