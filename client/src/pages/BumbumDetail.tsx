@@ -1,18 +1,88 @@
-import { useParams } from 'react-router-dom';
-import BackButton from '../components/BackButton';
-import InfoBox, { InfoBoxContainer } from '../components/InfoBox';
+import { useParams } from "react-router-dom";
+import BackButton from "../components/BackButton";
+import InfoBox, { InfoBoxContainer } from "../components/InfoBox";
 
 const petData = {
-  0: { name: 'Cielo', sex: 'Male', age: '2 years', weight: '2 kg', neutered: 'No', image: '/cielo.png' },
-  1: { name: 'Halo', sex: 'Female', age: '1.5 years', weight: '1.8 kg', neutered: 'Yes', image: '/halo.png' },
-  2: { name: 'Halo', sex: 'Female', age: '3 years', weight: '2.5 kg', neutered: 'No', image: '/halo.png' },
-  3: { name: 'Cielo', sex: 'Male', age: '2 years', weight: '2 kg', neutered: 'No', image: '/cielo.png' },
-  4: { name: 'Halo', sex: 'Female', age: '1 year', weight: '1.5 kg', neutered: 'Yes', image: '/halo.png' },
-  5: { name: 'Halo', sex: 'Female', age: '2.5 years', weight: '2.2 kg', neutered: 'No', image: '/halo.png' },
-  6: { name: 'Cielo', sex: 'Male', age: '3 years', weight: '2.8 kg', neutered: 'Yes', image: '/cielo.png' },
-  7: { name: 'Halo', sex: 'Female', age: '2 years', weight: '2 kg', neutered: 'No', image: '/halo.png' },
-  8: { name: 'Halo', sex: 'Female', age: '1.5 years', weight: '1.7 kg', neutered: 'Yes', image: '/halo.png' },
-  9: { name: 'Cielo', sex: 'Male', age: '2.5 years', weight: '2.3 kg', neutered: 'No', image: '/cielo.png' },
+  0: {
+    name: "Cielo",
+    sex: "Male",
+    age: "2 years",
+    weight: "2 kg",
+    neutered: "No",
+    image: "/cielo.png",
+  },
+  1: {
+    name: "Halo",
+    sex: "Female",
+    age: "1.5 years",
+    weight: "1.8 kg",
+    neutered: "Yes",
+    image: "/halo.png",
+  },
+  2: {
+    name: "Halo",
+    sex: "Female",
+    age: "3 years",
+    weight: "2.5 kg",
+    neutered: "No",
+    image: "/halo.png",
+  },
+  3: {
+    name: "Cielo",
+    sex: "Male",
+    age: "2 years",
+    weight: "2 kg",
+    neutered: "No",
+    image: "/cielo.png",
+  },
+  4: {
+    name: "Halo",
+    sex: "Female",
+    age: "1 year",
+    weight: "1.5 kg",
+    neutered: "Yes",
+    image: "/halo.png",
+  },
+  5: {
+    name: "Halo",
+    sex: "Female",
+    age: "2.5 years",
+    weight: "2.2 kg",
+    neutered: "No",
+    image: "/halo.png",
+  },
+  6: {
+    name: "Cielo",
+    sex: "Male",
+    age: "3 years",
+    weight: "2.8 kg",
+    neutered: "Yes",
+    image: "/cielo.png",
+  },
+  7: {
+    name: "Halo",
+    sex: "Female",
+    age: "2 years",
+    weight: "2 kg",
+    neutered: "No",
+    image: "/halo.png",
+  },
+  8: {
+    name: "Halo",
+    sex: "Female",
+    age: "1.5 years",
+    weight: "1.7 kg",
+    neutered: "Yes",
+    image: "/halo.png",
+  },
+  9: {
+    name: "Cielo",
+    sex: "Male",
+    age: "2.5 years",
+    weight: "2.3 kg",
+    neutered: "No",
+    image: "/cielo.png",
+  },
 };
 
 export default function BumbumDetail() {
@@ -30,12 +100,12 @@ export default function BumbumDetail() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="flex justify-between text-4xl mb-4">
+      <div className="flex justify-between text-2xl mb-4">
         <h1 className="text-primary-main font-bold">{pet.name}</h1>
         <img
-          src={isLiked ? '/heart-filled-icon.svg' : '/heart-icon.svg'}
+          src={isLiked ? "/heart-filled-icon.svg" : "/heart-icon.svg"}
           alt={`You like ${pet.name}`}
-          height={36}
+          width={24}
         />
       </div>
       <InfoBoxContainer>
@@ -45,8 +115,8 @@ export default function BumbumDetail() {
         <InfoBox infoKey="Neutered" infoValue={pet.neutered} />
       </InfoBoxContainer>
       <div>
-        <h2 className="text-primary-main text-2xl font-bold mb-2">About</h2>
-        <p>
+        <h2 className="text-primary-main text-lg font-bold mb-2">About</h2>
+        <p className="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
           finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
           euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
