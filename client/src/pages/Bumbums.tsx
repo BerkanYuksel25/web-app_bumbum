@@ -23,13 +23,13 @@ export default function Bumbums() {
       <p className="text-primary-main w-2/3 mb-4">
         Bumbum is waiting to meet you. Let's find your new best friend!
       </p>
-      <div className="flex gap-2 flex-wrap justify-between">
+      <div className="flex gap-2 flex-wrap justify-start">
         {pets.map((pet, index) => {
           const isLiked = index % 3 === 0;
           return (
             <Link
               to={`/bumbums/${index}`}
-              className="flex flex-col w-40 justify-center"
+              className="flex flex-col w-[calc(50%-0.5rem)] sm:w-40 justify-center"
               key={index}
             >
               <div className="relative h-28 rounded-t-xl overflow-clip">
