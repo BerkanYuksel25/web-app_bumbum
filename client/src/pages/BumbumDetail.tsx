@@ -93,49 +93,51 @@ export default function BumbumDetail() {
   return (
     <>
       <BackButton />
-      <div className="relative h-44 rounded-3xl overflow-clip border-primary-alt border-4 mb-4">
-        <img
-          src={pet.image}
-          alt={pet.name}
-          className="w-full h-full object-cover"
-        />
+      <div className="pt-12 pb-12">
+        <div className="relative h-44 rounded-3xl overflow-clip border-primary-alt border-4 mb-4">
+          <img
+            src={pet.image}
+            alt={pet.name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex justify-between text-2xl mb-4">
+          <h1 className="text-primary-main font-bold">{pet.name}</h1>
+          <img
+            src={isLiked ? "/heart-filled-icon.svg" : "/heart-icon.svg"}
+            alt={`You like ${pet.name}`}
+            width={24}
+          />
+        </div>
+        <InfoBoxContainer>
+          <InfoBox infoKey="Sex" infoValue={pet.sex} />
+          <InfoBox infoKey="Age" infoValue={pet.age} />
+          <InfoBox infoKey="Weight" infoValue={pet.weight} />
+          <InfoBox infoKey="Neutered" infoValue={pet.neutered} />
+        </InfoBoxContainer>
+        <div>
+          <h2 className="text-primary-main text-lg font-bold mb-2">About</h2>
+          <p className="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            blandit finibus nisi interdum tempus. Nunc consectetur, sapien vitae
+            accumsan euismod, est urna viverra mi, a rhoncus neque eros ut
+            libero. Ut ut libero non metus posuere ultricies id in quam.
+          </p>
+          <p className="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            blandit finibus nisi interdum tempus. Nunc consectetur, sapien vitae
+            accumsan euismod, est urna viverra mi, a rhoncus neque eros ut
+            libero. Ut ut libero non metus posuere ultricies id in quam.
+          </p>
+          <p className="text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            blandit finibus nisi interdum tempus. Nunc consectetur, sapien vitae
+            accumsan euismod, est urna viverra mi, a rhoncus neque eros ut
+            libero. Ut ut libero non metus posuere ultricies id in quam.
+          </p>
+        </div>
       </div>
-      <div className="flex justify-between text-2xl mb-4">
-        <h1 className="text-primary-main font-bold">{pet.name}</h1>
-        <img
-          src={isLiked ? "/heart-filled-icon.svg" : "/heart-icon.svg"}
-          alt={`You like ${pet.name}`}
-          width={24}
-        />
-      </div>
-      <InfoBoxContainer>
-        <InfoBox infoKey="Sex" infoValue={pet.sex} />
-        <InfoBox infoKey="Age" infoValue={pet.age} />
-        <InfoBox infoKey="Weight" infoValue={pet.weight} />
-        <InfoBox infoKey="Neutered" infoValue={pet.neutered} />
-      </InfoBoxContainer>
-      <div>
-        <h2 className="text-primary-main text-lg font-bold mb-2">About</h2>
-        <p className="text-sm mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
-          finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
-          euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
-          libero non metus posuere ultricies id in quam.
-        </p>
-        <p className="text-sm mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
-          finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
-          euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
-          libero non metus posuere ultricies id in quam.
-        </p>
-        <p className="text-sm mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
-          finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
-          euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
-          libero non metus posuere ultricies id in quam.
-        </p>
-      </div>
-      <div className="fixed bottom-0 left-0 right-0 flex justify-center bg-secondary-main bg-opacity-0 backdrop-blur-lg py-4 z-50">
+      <div className="fixed bottom-0 left-0 right-0 flex justify-center bg-secondary-main bg-opacity-50 backdrop-blur-xl py-4 z-50">
         <button className="w-3/5 mx-6 bg-primary-main text-primary-alt border border-none rounded-3xl py-4 px-10 text-sm font-bold">
           Sign up to adopt
         </button>
