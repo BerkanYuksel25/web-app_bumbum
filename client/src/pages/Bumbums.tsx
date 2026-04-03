@@ -68,6 +68,25 @@ export default function Bumbums() {
           );
         })}
       </div>
+      <div className="bg-opacity-75 backdrop-blur-xl fixed left-0 right-0 bottom-0">
+        <div className="bg-primary-main rounded-full m-4 flex justify-evenly p-2">
+          <button>
+            <img src="/comment-icon.svg" />
+          </button>
+          <button>
+            <img src="/notifications-icon.svg" />
+          </button>
+          <button className="bg-primary-alt rounded-full p-4">
+            <img src="/add-icon.svg" />
+          </button>
+          <button>
+            <img src="/favourites-icon.svg" />
+          </button>
+          <button>
+            <img src="/avatar-icon.svg" />
+          </button>
+        </div>
+      </div>
     </>
   );
 }
