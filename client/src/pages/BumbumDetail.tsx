@@ -116,14 +116,26 @@ export default function BumbumDetail() {
       </InfoBoxContainer>
       <div>
         <h2 className="text-primary-main text-lg font-bold mb-2">About</h2>
-        <p className="text-sm">
+        <p className="text-sm mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
+          finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
+          euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
+          libero non metus posuere ultricies id in quam.
+        </p>
+        <p className="text-sm mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
+          finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
+          euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
+          libero non metus posuere ultricies id in quam.
+        </p>
+        <p className="text-sm mb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
           finibus nisi interdum tempus. Nunc consectetur, sapien vitae accumsan
           euismod, est urna viverra mi, a rhoncus neque eros ut libero. Ut ut
           libero non metus posuere ultricies id in quam.
         </p>
       </div>
-      <div className="fixed bottom-0 left-0 right-0 flex justify-center py-4 z-50">
+      <div className="fixed bottom-0 left-0 right-0 flex justify-center bg-secondary-main bg-opacity-0 backdrop-blur-lg py-4 z-50">
         <button className="w-3/5 mx-6 bg-primary-main text-primary-alt border border-none rounded-3xl py-4 px-10 text-sm font-bold">
           Sign up to adopt
         </button>
