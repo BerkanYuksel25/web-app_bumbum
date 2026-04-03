@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 
 export function InfoBoxContainer({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-wrap justify-around gap-4 mb-4">{children}</div>
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">{children}</div>
   );
 }
 
