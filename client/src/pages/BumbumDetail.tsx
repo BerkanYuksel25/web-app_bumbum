@@ -123,6 +123,11 @@ export default function BumbumDetail() {
           libero non metus posuere ultricies id in quam.
         </p>
       </div>
+      <div className="fixed bottom-0 left-0 right-0 flex justify-center py-4 z-50">
+        <button className="w-3/5 mx-6 bg-primary-main text-primary-alt border border-none rounded-3xl py-4 px-10 text-sm font-bold">
+          Sign up to adopt
+        </button>
+      </div>
     </>
   );
 }
