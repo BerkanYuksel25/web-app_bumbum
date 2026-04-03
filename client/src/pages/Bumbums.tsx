@@ -23,7 +23,7 @@ export default function Bumbums() {
       <p className="text-sm text-primary-main w-2/3 mb-4">
         Bumbum is waiting to meet you. Let's find your new best friend!
       </p>
-      <div className="flex gap-2 flex-wrap justify-start">
+      <div className="flex gap-2 flex-wrap justify-center">
         {pets.map((pet, index) => {
           const isLiked = index % 3 === 0;
           return (
